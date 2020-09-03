@@ -1,0 +1,45 @@
+import org.junit.jupiter.api.Test;
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class TestCode {
+
+    int[] arr = {};
+
+    @Test
+    public void whenFlatMapEmployeeNames_thenGetNameStream() {
+        List<List<String>> namesNested = Arrays.asList(
+                Arrays.asList("Jeff", "Bezos"),
+                Arrays.asList("Bill", "Gates"),
+                Arrays.asList("Mark", "Zuckerberg"));
+        System.out.println("List of List of string -----> "+ namesNested);
+        System.out.println("List of List of string size -----> "+ namesNested.size());
+
+        List<String> namesFlatStream = namesNested.stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
+
+        System.out.println("List of string flattened -----> "+ namesFlatStream);
+        System.out.println("List of string flattened size -----> "+ namesFlatStream.size());
+
+        assertEquals(namesFlatStream.size(), namesNested.size() * 2);
+    }
+
+    @Test
+    void forEachExample() {
+        List<String> names = new ArrayList<String>();
+        names.add("abcd");
+        names.add("efgh");
+        names.add("ijkl");
+        names.add("mnop");
+        names.add("qrst");
+        names.add("uvwx");
+        names.add("yz");
+
+        names.forEach(sout -> System.out.println(sout));
+    }
+}
