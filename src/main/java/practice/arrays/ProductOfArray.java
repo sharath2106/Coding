@@ -1,14 +1,14 @@
 package practice.arrays;
 
-public class SumOfArray {
+public class ProductOfArray {
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6,7};
-        int sum = 0;
+        int product = 1;
 
         for(int arrayValue : array) {
-            sum+=arrayValue;
+            product*=arrayValue;
         }
 
-        System.out.println(sum);
+        System.out.println(product);
     }
 }

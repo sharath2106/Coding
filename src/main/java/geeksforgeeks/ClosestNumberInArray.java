@@ -16,5 +16,6 @@ public class ClosestNumberInArray {
                 closestNumber = numbers[i];
             }
         }
+        System.out.println(closestNumber);
     }
 }

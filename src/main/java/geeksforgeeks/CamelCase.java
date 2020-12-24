@@ -6,7 +6,7 @@ public class CamelCase {
         int count = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) <= 'Z' && str.charAt(i) >= 'A') {
+            if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
                 count++;
             }
         }
