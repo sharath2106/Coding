@@ -4,7 +4,7 @@ public class DoesStringContainsAllDigits {
     public static void main(String[] args) {
         String str = "Welcome123456789MyChannel";
         DoesStringContainsAllDigits ds = new DoesStringContainsAllDigits();
-        if(ds.allDigitsPresent(str))
+        if (ds.allDigitsPresent(str))
             System.out.println("TRUE");
         else
             System.out.println("FALSE");
@@ -19,8 +19,12 @@ public class DoesStringContainsAllDigits {
             }
         }
 
-        for(int i =0; i<bool.length; i++) {
-            if(bool[i]==false)
+        return isAllDigitPresent(bool);
+    }
+
+    private boolean isAllDigitPresent(boolean[] bool) {
+        for (int i = 0; i < bool.length; i++) {
+            if (!bool[i])
                 return false;
         }
         return true;
