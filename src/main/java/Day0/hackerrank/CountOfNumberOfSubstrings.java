@@ -44,4 +44,3 @@ public class CountOfNumberOfSubstrings {
     System.out.print("Count = " + countSubstr(str, n, x, y));
   }
 }
-

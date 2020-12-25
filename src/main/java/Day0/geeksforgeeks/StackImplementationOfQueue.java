@@ -53,4 +53,3 @@ public class StackImplementationOfQueue {
     System.out.println(q.deQueue());
   }
 }
-

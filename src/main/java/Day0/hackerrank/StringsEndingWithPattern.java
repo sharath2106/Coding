@@ -49,4 +49,3 @@ public class StringsEndingWithPattern {
     System.out.println(countOfStrings(pat, n, sArr));
   }
 }
-
