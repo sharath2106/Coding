@@ -1,5 +1,6 @@
 package Day2;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,12 +12,14 @@ public class FirstDuplicateNumberInArray {
   }
 
   private int findDuplicate(int[] numbers) {
-    Set<Integer> set = new HashSet<>();
-    for (int i = 0; i < numbers.length; i++) {
-      if (!set.add(numbers[i])) {
-        return numbers[i];
-      }
-    }
-    return -1;
+    //    Set<Integer> set = new HashSet<>();
+    //    for (int i = 0; i < numbers.length; i++) {
+    //      if (!set.add(numbers[i])) {
+    //        return numbers[i];
+    //      }
+    //    }
+    //    return -1;
+    Set<Integer> allItems = new HashSet<>();
+    return Arrays.stream(numbers).filter(i -> !allItems.add(i)).findFirst().orElse(-1);
   }
 }
