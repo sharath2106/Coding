@@ -25,6 +25,7 @@ public class WordCounterWithBreakIterator {
 
   public static void main(String[] args) {
     System.out.println(
-        getWords("A PT CR M0RT BOUSG SABN NTE TR/GB/(G) = RAND(MIN(XXX, YY + ABC))"));
+        getWords(
+            "A PT CR M0RT 56  8989 BOUSG SABN NTE TR/GB/(G) = RAND (MIN(XXX, YY(ABCD) + ABC))"));
   }
 }
