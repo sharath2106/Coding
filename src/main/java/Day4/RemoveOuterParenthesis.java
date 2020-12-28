@@ -3,7 +3,7 @@ package Day4;
 class RemoveOuterParenthesis {
   public static void main(String[] args) {
     RemoveOuterParenthesis pr = new RemoveOuterParenthesis();
-    String parenthesis = "()()()()()";
+    String parenthesis = "(()())(()()())";
     System.out.println(pr.removeOuterParentheses(parenthesis));
   }
 
