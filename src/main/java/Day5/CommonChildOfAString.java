@@ -1,27 +1,28 @@
 package Day5;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class CommonChildOfAString { // Needs change in solution
   public static void main(String[] args) {
-    CommonChildOfAString child = new CommonChildOfAString();
-    String firstString = "aabbcdasdff";
-    String secondString = "hgab";
-
-    System.out.println(child.findCommonChildOfAString(firstString, secondString));
-  }
-
-  private int findCommonChildOfAString(String firstString, String secondString) {
-    Set<String> distinctWords = new HashSet<>();
-    for (int i = 0; i < firstString.length(); i++) {
-      for (int j = 0; j < secondString.length(); j++) {
-        if (firstString.charAt(i) == secondString.charAt(j)) {
-          distinctWords.add(String.valueOf(firstString.charAt(i)));
+    String firstString = "abcde";
+    String secondString = "defgh";
+    int firstStringLength = firstString.length();
+    int[][] commonChars = new int[firstStringLength + 1][firstStringLength + 1];
+    for (int i = 1; i <= firstStringLength; i++) {
+      for (int j = 1; j <= firstStringLength; j++) {
+        System.out.println("i ---> " + i + "j ---> " + j);
+        if (firstString.charAt(i - 1) != secondString.charAt(j - 1)) {
+          System.out.println("First string charat -----> " + firstString.charAt(i - 1));
+          System.out.println("Second string charat -----> " + secondString.charAt(j - 1));
+          System.out.println("FIRST LOOP 1----> " + commonChars[i][j - 1]);
+          System.out.println("FIRST LOOP 2 ----> " + commonChars[i - 1][j]);
+          commonChars[i][j] = Math.max(commonChars[i][j - 1], commonChars[i - 1][j]);
+          System.out.println("MAX LOOP 1 ----> " + commonChars[i][j]);
+        } else {
+          System.out.println("SECOND LOOP ---> " + commonChars[i - 1][j - 1]);
+          commonChars[i][j] = commonChars[i - 1][j - 1] + 1;
+          System.out.println("MAX LOOP 2 ----> " + commonChars[i][j]);
         }
       }
     }
-
-    return distinctWords.size();
+    System.out.println(commonChars[firstStringLength][firstStringLength]);
   }
 }
