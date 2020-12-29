@@ -10,7 +10,7 @@ public class LeftRotate {
   }
 
   // Function to left rotate an array k time
-  static void leftRotate(int arr[], int n, int k, int temp[]) {
+  static void leftRotate(int[] arr, int n, int k, int[] temp) {
     // Starting position of array after k
     // rotations in temp[] will be k % n
     int start = k % n;

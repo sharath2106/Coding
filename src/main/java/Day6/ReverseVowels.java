@@ -3,8 +3,8 @@ package Day6;
 public class ReverseVowels {
   public static void main(String[] args) {
     ReverseVowels reverse = new ReverseVowels();
-    String stringToBeChanged = "bade";
-    reverse.reverseString(stringToBeChanged);
+    String stringToBeChanged = "baudeoj";
+    System.out.println(reverse.reverseString(stringToBeChanged));
   }
 
   private String reverseString(String stringToBeChanged) {
