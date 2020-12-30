@@ -2,14 +2,15 @@ package Day0.geeksforgeeks;
 
 public class DuplicateZeroes {
   public void duplicateZeros(int[] arr) {
+    int[] indexes = new int[arr.length];
     for (int i = 0; i < arr.length; i++) {
       if (arr[i] == 0) {
-        for (int j = arr.length - 1; j > i; j--) {
-          arr[j] = arr[j - 1];
-        }
-        i++;
+        indexes[i] = i;
       }
-      System.out.println(i);
+    }
+
+    if (indexes.length > 1) {
+      System.out.println("Duplicates");
     }
   }
 
