@@ -3,7 +3,7 @@ package Day0.geeksforgeeks;
 public class MaxLengthOfPassword {
   public static void main(String[] args) {
     MaxLengthOfPassword password = new MaxLengthOfPassword();
-    String passwordString = "1A3scd2io";
+    String passwordString = "1ATY3scd2io";
     password.checkPassword(passwordString);
   }
 
