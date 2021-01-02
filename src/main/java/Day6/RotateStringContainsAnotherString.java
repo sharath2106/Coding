@@ -3,8 +3,8 @@ package Day6;
 public class RotateStringContainsAnotherString {
   public static void main(String[] args) {
     RotateStringContainsAnotherString string = new RotateStringContainsAnotherString();
-    String firstString = "";
-    String secondString = "asdff";
+    String firstString = "asdf";
+    String secondString = "sdfa";
     System.out.println(string.rotateString(firstString, secondString));
   }
 

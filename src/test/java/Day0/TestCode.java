@@ -70,10 +70,37 @@ public class TestCode {
   }
 
   @Test
+  public void whenApplyDistinct_thenRemoveDuplicatesFromStream() {
+    List<Integer> intList = Arrays.asList(2, 5, 3, 2, 4, 3);
+    List<Integer> distinctIntList = intList.stream().distinct().collect(Collectors.toList());
+
+    System.out.println(distinctIntList);
+  }
+
+  @Test
   void useStreamReduce() {
     List<Integer> number = Arrays.asList(2, 3, 4, 5, 8, 10);
     Integer reduce = number.stream().filter(x -> x % 2 == 0).reduce(0, (a, b) -> a + b);
 
     System.out.println(reduce);
+
+      int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+              11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+      Arrays.stream(arr).sum();
+  }
+
+  @Test
+  public void whenCollectByJoining_thenGetJoinedString() {
+    List<String> names = new ArrayList<String>();
+    names.add("abcd");
+    names.add("efgh");
+    names.add("ijkl");
+    names.add("mnop");
+    names.add("qrst");
+    names.add("uvwx");
+    names.add("yz");
+    String empNames = names.stream().collect(Collectors.joining(", "));
+
+    System.out.println(empNames);
   }
 }

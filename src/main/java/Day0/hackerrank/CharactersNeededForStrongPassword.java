@@ -31,7 +31,7 @@ public class CharactersNeededForStrongPassword {
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
-    String password = in.next();
+    String password = "Qwerty@123";
     int answer = minimumNumber(password);
     System.out.println(answer);
     in.close();
