@@ -131,4 +131,24 @@ public class TestCode {
 
     System.out.println(empNames);
   }
+
+  @Test
+  void addTwoArray() {
+    int[] arr1 = new int[] {7, 0, 3};
+    int[] arr2 = new int[] {1, -1, 6};
+
+    int[] resultArray = new int[arr1.length + arr2.length];
+
+    int pos = 0;
+    for (int value : arr1) {
+      resultArray[pos] = value;
+      pos++;
+    }
+    for (int value : arr2) {
+      resultArray[pos] = value;
+      pos++;
+    }
+
+    Arrays.stream(resultArray).sorted().forEach(s -> System.out.print(s));
+  }
 }
