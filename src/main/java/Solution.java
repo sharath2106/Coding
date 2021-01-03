@@ -36,8 +36,7 @@ public class Solution {
       for (int i = 0; i < length; i++) {
         set.add(token.charAt(i));
       }
-      System.out.println(
-      set.toString().replaceAll("\\[|\\]", "").replaceAll(",", ""));
+      System.out.println(set.toString().replaceAll("\\[|\\]", "").replaceAll(",", ""));
     }
   }
 }
