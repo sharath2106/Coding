@@ -44,6 +44,8 @@ public class TestCode {
     names.add("uvwx");
     names.add("yz");
 
+    System.out.println(names.stream().filter(e -> e.contains("z")).count());
+
     names.stream().forEach(s -> System.out.println(s));
     names.forEach(sout -> System.out.println(sout));
   }
@@ -52,7 +54,27 @@ public class TestCode {
   void useStreamsWithMap() {
     List<Integer> number = Arrays.asList(2, 3, 4, 5);
 
-    number.stream().map(x -> x * x).forEach(y -> System.out.println(y));
+    System.out.println(number.stream().map(x -> x * x).count());
+  }
+
+  @Test
+  public void whenApplyDistinct_thenRemoveDuplicatesFromStreamString() {
+    String str = "my name is robert my name";
+
+    String[] split = str.split(" ");
+    List<String> intList = Arrays.asList(split);
+    /*
+          StringTokenizer st = new StringTokenizer(str, " ");
+            List<String> intList = new ArrayList<>();
+
+            while(st.hasMoreTokens()){
+                intList.add(st.nextToken());
+            }
+    */
+    List<String> distinctIntList = intList.stream().distinct().collect(Collectors.toList());
+
+    System.out.println(intList.stream().distinct().collect(Collectors.joining(" ")));
+    System.out.println(distinctIntList);
   }
 
   @Test
@@ -60,6 +82,14 @@ public class TestCode {
     List<Integer> number = Arrays.asList(2, 3, 4, 5);
 
     number.stream().filter(x -> x % 2 == 0).forEach(y -> System.out.println(y));
+  }
+
+  @Test
+  public void whenStreamCount_thenGetElementCount() {
+    int[] empList = new int[] {100, 200, 400, 500};
+    Long empCount = Arrays.stream(empList).filter(e -> e % 3 == 0).count();
+
+    System.out.println(empCount);
   }
 
   @Test
@@ -84,9 +114,8 @@ public class TestCode {
 
     System.out.println(reduce);
 
-      int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-              11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-      Arrays.stream(arr).sum();
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    Arrays.stream(arr).sum();
   }
 
   @Test
