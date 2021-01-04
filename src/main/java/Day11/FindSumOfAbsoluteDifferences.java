@@ -13,7 +13,6 @@ public class FindSumOfAbsoluteDifferences {
     for (int i = n - 1; i >= 0; i--) {
       sum = sum + (i * arr[i] - (n - 1 - i) * arr[i]);
     }
-
     return sum;
   }
 }
