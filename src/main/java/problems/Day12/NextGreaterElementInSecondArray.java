@@ -28,8 +28,7 @@ public class NextGreaterElementInSecondArray {
     }
 
     for (int j = 0; j < n1; j++) {
-      if (map.containsKey(nums1[j])) nums1[j] = map.get(nums1[j]);
-      else nums1[j] = -1;
+        nums1[j] = map.getOrDefault(nums1[j], -1);
     }
     Arrays.stream(nums1).forEach(System.out::println);
   }

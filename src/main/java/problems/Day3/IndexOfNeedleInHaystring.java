@@ -3,8 +3,8 @@ package problems.Day3;
 public class IndexOfNeedleInHaystring {
   public static void main(String[] args) {
     IndexOfNeedleInHaystring index = new IndexOfNeedleInHaystring();
-    String hayString = "";
-    String needle = "a";
+    String hayString = "abc";
+    String needle = "abc";
     System.out.println(index.returnIndexOfNeedle(hayString, needle));
   }
 

@@ -13,8 +13,16 @@ public class MergeTwoSortedArrays {
       // of second array. If yes, store first
       // array element and increment first array
       // index. Otherwise do same with second array
-      if (arr1[i] < arr2[j]) arr3[k++] = arr1[i++];
-      else arr3[k++] = arr2[j++];
+      if (arr1[i] < arr2[j]) {
+        arr3[k] = arr1[i];
+        k++;
+        i++;
+      }
+      else {
+          arr3[k] = arr2[j];
+          k++;
+          j++;
+      }
     }
 
     // Store remaining elements of first array

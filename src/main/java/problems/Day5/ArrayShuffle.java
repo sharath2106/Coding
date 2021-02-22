@@ -17,7 +17,7 @@ public class ArrayShuffle {
     //    List<Integer> list = new ArrayList<>();
     int[] result = new int[nums.length];
     if (nums.length % n == 0) {
-      for (int i = 0; i < n; i++) {
+      for (int i = 0; i < nums.length/2; i++) {
         //        list.add(nums[i]);
         //        list.add(nums[i + n]);
         result[2 * i] = nums[i];

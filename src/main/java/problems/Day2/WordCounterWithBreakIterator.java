@@ -3,10 +3,11 @@ package problems.Day2;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WordCounterWithBreakIterator {
 
-  public static List<String> getWords(String text) {
+  public static String getWords(String text) {
     List<String> words = new ArrayList<>();
     BreakIterator breakIterator = BreakIterator.getWordInstance();
     breakIterator.setText(text);
@@ -15,12 +16,11 @@ public class WordCounterWithBreakIterator {
       int firstIndex = lastIndex;
       lastIndex = breakIterator.next();
       if (lastIndex != BreakIterator.DONE && Character.isLetterOrDigit(text.charAt(firstIndex))) {
-        System.out.println(words);
         words.add(text.substring(firstIndex, lastIndex));
       }
     }
 
-    return words;
+    return words.stream().collect(Collectors.joining(" "));
   }
 
   public static void main(String[] args) {

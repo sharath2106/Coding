@@ -7,6 +7,12 @@ public class RemoveDuplicateCharacters {
     System.out.println(removeDuplicateLetters(s));
   }
 
+  /*
+ There are diff ways -
+    1. use distinct after adding the characters in charArray
+    2. use set by add the characters in charArray
+    3. print only the chars after adding them in map
+*/
   public static String removeDuplicateLetters(String s) {
     char[] arr = s.toCharArray();
     StringBuilder sb = new StringBuilder();

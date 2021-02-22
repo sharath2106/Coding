@@ -31,6 +31,7 @@ public class CountFrequenciesOfElements {
     int arr[] = {2, 3, 3, 2, 5};
     findCounts(arr, arr.length);
 
+/*
     int arr1[] = {1};
     findCounts(arr1, arr1.length);
 
@@ -48,5 +49,6 @@ public class CountFrequenciesOfElements {
 
     int arr6[] = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     findCounts(arr6, arr6.length);
+*/
   }
 }

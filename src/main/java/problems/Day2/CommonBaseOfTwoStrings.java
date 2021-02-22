@@ -35,8 +35,8 @@ public class CommonBaseOfTwoStrings {
   }
 
   public static void main(String[] args) {
-    String s1 = "pqrspqrs";
-    String s2 = "pqrspqrspqrspqrs";
+    String s1 = "pqrspqrst";
+    String s2 = "pqrspqrstpqrspqrst";
 
     System.out.println(countCommonBases(s1, s2));
   }

@@ -4,7 +4,7 @@ public class FindSumOfAbsoluteDifferences {
   public static void main(String[] args) {
     FindSumOfAbsoluteDifferences differences = new FindSumOfAbsoluteDifferences();
 
-    int[] numbers = new int[] {1, 8, 9, 15, 16};
+    int[] numbers = new int[] {1, 8, 9, 15, 6};
     System.out.println(differences.findSum(numbers, numbers.length));
   }
 

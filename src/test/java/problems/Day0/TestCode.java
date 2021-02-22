@@ -127,7 +127,7 @@ public class TestCode {
     names.add("qrst");
     names.add("uvwx");
     names.add("yz");
-    String empNames = names.stream().collect(Collectors.joining(", "));
+    String empNames = names.stream().collect(Collectors.joining(""));
 
     System.out.println(empNames);
   }

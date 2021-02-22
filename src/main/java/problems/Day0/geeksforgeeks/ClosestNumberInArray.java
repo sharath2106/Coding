@@ -11,8 +11,8 @@ public class ClosestNumberInArray {
     for (int i = 0; i < numbers.length; i++) {
       difference = target - numbers[i];
 
-      if (difference > numbers[i]) {
-        //                difference = i;
+      if (difference < numbers[i]) {
+//                        difference = i;
         closestNumber = numbers[i];
       }
     }
