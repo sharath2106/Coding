@@ -40,6 +40,6 @@ public class BasicCalculatorSolution {
 
   public static void main(String[] args) {
     BasicCalculatorSolution calculate = new BasicCalculatorSolution();
-    System.out.println(calculate.calculate("1+4"));
+    System.out.println(calculate.calculate("1-9/1+4*9"));
   }
 }

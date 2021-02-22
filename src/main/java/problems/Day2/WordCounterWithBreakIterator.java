@@ -14,8 +14,12 @@ public class WordCounterWithBreakIterator {
     int lastIndex = breakIterator.first();
     while (BreakIterator.DONE != lastIndex) {
       int firstIndex = lastIndex;
+      System.out.println("First Index --> "+firstIndex);
       lastIndex = breakIterator.next();
+        System.out.println("Last Index --> "+lastIndex);
       if (lastIndex != BreakIterator.DONE && Character.isLetterOrDigit(text.charAt(firstIndex))) {
+        System.out.println("SUBSTRING --> "+text.substring(firstIndex, lastIndex));
+        System.out.println("\n");
         words.add(text.substring(firstIndex, lastIndex));
       }
     }
