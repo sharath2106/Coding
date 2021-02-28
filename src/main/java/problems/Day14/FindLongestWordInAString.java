@@ -34,7 +34,7 @@ public class FindLongestWordInAString {
     String a = "ajppkle";
     List<String> listOfStrings = new ArrayList<>();
     listOfStrings.add("apppppppppp");
-    listOfStrings.add("APPLE");
+    listOfStrings.add("apple");
     listOfStrings.add("APE");
     listOfStrings.add("apeasd");
     System.out.println(word.findLongestWord(a, listOfStrings));

@@ -28,8 +28,10 @@ public class CountFrequenciesOfElements {
 
   // Driver code
   public static void main(String[] args) {
-    int arr[] = {2, 3, 3, 2, 5};
-    findCounts(arr, arr.length);
+      int arr2[] = {1, 3, 5, 7, 9, 1, 3, 5, 7, 9, 1};
+      findCounts(arr2, arr2.length);
+//    int arr[] = {2, 3, 3, 2, 5};
+//    findCounts(arr, arr.length);
 
 /*
     int arr1[] = {1};
