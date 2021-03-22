@@ -59,7 +59,7 @@ public class SecondNonRepeatingCharacter {
   // driver program
   public static void main(String[] args) {
     String str = "geeksfOorgeeks";
-    int k = 3;
+    int k = 1;
     int res = kthNonRepeating(str, k);
 
     System.out.println(

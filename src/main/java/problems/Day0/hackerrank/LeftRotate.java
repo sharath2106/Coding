@@ -4,9 +4,11 @@ package problems.Day0.hackerrank;
 // an array K number of times
 public class LeftRotate {
   // Fills temp[] with two copies of arr[]
-  static void preprocess(int arr[], int n, int temp[]) {
+  static void preprocess(int[] arr, int n, int[] temp) {
     // Store arr[] elements at i and i + n
-    for (int i = 0; i < n; i++) temp[i] = temp[i + n] = arr[i];
+    for (int i = 0; i < n; i++) {
+      temp[i] = temp[i + n] = arr[i];
+    }
   }
 
   // Function to left rotate an array k time
@@ -16,17 +18,19 @@ public class LeftRotate {
     int start = k % n;
 
     // Print array after k rotations
-    for (int i = start; i < start + n; i++) System.out.print(temp[i] + " ");
+    for (int i = start; i < start + n; i++) {
+      System.out.print(temp[i] + " ");
+    }
 
     System.out.print("\n");
   }
 
   // Driver program
   public static void main(String[] args) {
-    int arr[] = {1, 3, 5, 7, 9};
+    int[] arr = {1, 3, 5, 7, 9};
     int n = arr.length;
 
-    int temp[] = new int[2 * n];
+    int[] temp = new int[2 * n];
     preprocess(arr, n, temp);
 
     int k = 2;

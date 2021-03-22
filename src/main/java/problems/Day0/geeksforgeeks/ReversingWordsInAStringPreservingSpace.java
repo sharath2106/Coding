@@ -2,7 +2,7 @@ package problems.Day0.geeksforgeeks;
 
 import java.util.Stack;
 
-public class ReversingWordsInAString {
+public class ReversingWordsInAStringPreservingSpace {
   public static void main(String[] args) {
     String theString = "Hello fucking world";
 
