@@ -24,11 +24,13 @@ public class CountOfNumberOfSubstrings {
     for (int i = 0; i < n; i++) {
 
       // if true, increment 'count_x'
-      if (str.charAt(i) == x) count_x++;
+      if (str.charAt(i) == x)
+        count_x++;
 
       // if true accumulate 'count_x'
       // to 'tot_count'
-      if (str.charAt(i) == y) tot_count += count_x;
+      if (str.charAt(i) == y)
+        tot_count += count_x;
     }
 
     // required count

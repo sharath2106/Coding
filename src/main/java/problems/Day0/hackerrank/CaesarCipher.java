@@ -16,7 +16,7 @@ public class CaesarCipher {
 //      }
 
   public static void main(String[] args) {
-    String str = "abcdefgh";
+    String str = "abcdeFgh";
     int shift = 4;
 
     char sarr[] = str.toCharArray();
@@ -33,6 +33,7 @@ public class CaesarCipher {
     if (c >= 'a')
         base = 'a';
 
-    return (char) (((c - base + shift) % 26) + base);
+//    return (char) (c + shift); //efghijkl  xyzabcde
+    return (char) (((c - base + shift) % 26) + base); //efghijkl  xyzabcde
   }
 }
